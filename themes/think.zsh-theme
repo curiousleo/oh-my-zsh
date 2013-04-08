@@ -7,8 +7,8 @@
 #
 # This is what the prompt looks like in action:
 #
-# curiousleo at think2 in ~/Code/oh-my-zsh.git
-# ± _                                                 2013-04-08 18:24:48 +0200
+# ┌ curiousleo at think2 in ~/Code/oh-my-zsh.git
+# └ ± _                                               2013-04-08 18:24:48 +0200
 #
 
 function prompt_char {
@@ -18,7 +18,7 @@ function prompt_char {
   echo '○'
 }
 
-PROMPT='%{$fg[blue]%}%n%{$reset_color%} at %{$fg[yellow]%}%m%{$reset_color%} in %{$fg[green]%}${PWD/#$HOME/~}%b%{$reset_color%}
-$(prompt_char) '
+PROMPT='┌ %{$fg[blue]%}%n%{$reset_color%} at %{$fg[yellow]%}%m%{$reset_color%} in %{$fg[green]%}${PWD/#$HOME/~}%b%{$reset_color%}
+└ $(prompt_char) '
 
 RPROMPT='%{$fg[red]%}%D{%Y-%m-%d %T %z}%{$reset_color%}%'
